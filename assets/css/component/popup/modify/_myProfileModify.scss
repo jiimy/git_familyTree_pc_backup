@@ -1,0 +1,65 @@
+.myProfileModify {
+  display: none;
+  position: absolute;
+  background: #fff;
+  width: 600px;
+  height: 720px;
+  z-index: 1;
+  border: 1px solid #efefef;
+  .overflow{
+    height:607px;
+  }
+  .profileWrap {
+    .profileWrap__anoterInfo {
+      padding:30px 0 0 30px;
+      .button {
+        margin-top: 30px;
+        button {
+          width:80px;
+          height:20%;
+          font: 400 14px 'NS';
+          color: white;
+          &:nth-child(1) {
+            background: yellow;
+          }
+          &:nth-child(2) {
+            background: #1DC800;
+          }
+          &:nth-child(3) {
+            background: #dd4f43;
+          }
+          &:nth-child(4) {
+            background: #3b589e;
+          }
+          &.on {
+            background: #eee;
+            color: #ccc;
+          }
+        }
+      }
+      p:nth-child(2){
+        margin-top: 8px;
+      }
+    }
+  }
+  .PersonInformation{
+    padding:20px 15px 15px 15px;
+    td:nth-child(2n){
+      width:38%;
+    }
+    input{
+      width: 92%;
+      padding: 8px 10px ;
+      font:500 14px 'NS';
+      margin-bottom: 10px;
+      &.address{
+        width:97%;
+      }
+    }
+  }
+  .anniversary{
+    input[type=text]{
+      width:50%;
+    }
+  }
+}

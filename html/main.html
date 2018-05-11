@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>가족나무</title>
+  <!-- base js -->
+  <!-- <script src="js/base/jquery-2.2.4.min.js"></script> -->
+  <script src="/assets/js/base/jquery-2.2.4.min.js"></script>
+  <script src="/assets/js/base/jquery-ui.min.js"></script>
+  <!-- lib js -->
+  <script src="/assets/js/lib/moment.min.js"></script>
+  <script src="/assets/js/lib/fullcalendar.min.js"></script>
+
+  <!-- base css -->
+  <!-- <link rel="stylesheet" href="./normalize.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <!-- <link rel="stylesheet" href="/assets/css/base/normalize.css">
+  <link rel="stylesheet" href="/assets/css/base/reset.css"> -->
+  <link rel="stylesheet" href="/assets/css/base/index.css">
+  
+  <!-- lib css -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/assets/css/lib/font.css">
+  <link rel="stylesheet" href="/assets/css/lib/hierarchy-view.css">
+  <link rel="stylesheet" href="/assets/css/lib/familyTree.css">
+  <link rel="stylesheet" href="/assets/css/lib/fullcalendar.min.css">
+  <link rel="stylesheet" href="/assets/css/lib/fullcalendar.print.min.css">
+  <!-- component -->
+  <link rel="stylesheet" href="/assets/css/component/index.css">
+  <!-- basic css -->
+  
+  <link rel="stylesheet" href="/assets/css/common.css">
+
+  <!-- 달력 데이터 테스트용 더미데이터 -->
+  <script src="/assets/js/CalendarDummyData.js"></script>
+</head>
+
+<body>
+  <!-- 가계도에서 가족카드 보기  -->
+  <div class="viewfamilyCard">
+    <h3>가족카드</h3>
+    <div class="popup__close">
+      <a href=""></a>
+    </div>
+    <div class="profile clear_fix">
+      <div class="img">
+        <img src="" alt="">
+      </div>
+      <div class="text">
+        <p class="name">이미정</p>
+        <p class="gamun">남양홍씨 문정공파</p>
+        <p class="relation">
+          <br>2촌 / 여동생</p>
+      </div>
+    </div>
+    <ul class="contentNav clear_fix">
+      <li class="active">기본정보</li>
+      <li>추가정보</li>
+      <li>사진/영상</li>
+    </ul>
+
+    <div class="info tab1 block">
+      <ul>
+        <li>
+          <p>전화번호</p>
+          <span>010-0000-0000</span>
+        </li>
+        <li>
+          <p>이메일</p>
+          <span>lee@email.com</span>
+        </li>
+        <li>
+          <p>생년월일</p>
+          <span>1982년 06월 20일</span>
+        </li>
+      </ul>
+      <div class="alerttopNew">기념일</div>
+      <ul class="day">
+        <li>
+          <div class="title">[기념일]</div>
+          <div class="content">홍규식님의 기일입니다.</div>
+          <div class="date">친가 / 매년 7월 30일</div>
+        </li>
+      </ul>
+      <button>기념일 추가</button>
+    </div>
+    <div class="info tab2">
+      <ul>
+        <li class="isAlive">
+          <p>생존한 인물입니까?</p>
+          <span class="sub">왼쪽을 선택하면 해당 인물이 조상으로 표시되며,
+            <br>기일정보와 묘지정보가 추가됩니다.</span>
+          <label class="switch no-select" aria-label="Toggle Switch">
+            <input class="switch-input no-select" type="checkbox">
+            <span class="switch-track no-select">
+              <span class="switch-thumb no-select"></span>
+            </span>
+          </label>
+        </li>
+        <li>
+          <span>세손</span>
+          <p>6대종손</p>
+        </li>
+        <li>
+          <span>기일</span>
+          <p>1982년 06월 20일</p>
+        </li>
+      </ul>
+      <h4>묘지정보</h4>
+      <ul class="tombInfo">
+        <li class="clear_fix">
+          <span class="name2">홍균성</span>
+          <span class="address">경기 용인시 처안구 원삼면 수정로6번길43</span>
+          <button class="detail_button">지도보기</button>
+        </li>
+      </ul>
+      <div class="tombImgWrap clear_fix">
+        <h5>산소 주변 사진</h5>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+
+    </div>
+    <div class="info tab3">
+      <ul class="tabWrap clear_fix">
+        <li class="img tabitem active">사진</li>
+        <li class="movie tabitem">동영상</li>
+      </ul>
+      <div class="tabList block">
+        <div class="pictureWrap">
+
+          <h5>2017년 12월</h5>
+          <ul>
+            <li>
+              <img src="" alt="">
+            </li>
+            <li>
+              <img src="" alt="">
+            </li>
+            <li>
+              <img src="" alt="">
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tabList">2</div>
+    </div>
+  </div>
+
+  <!-- 내 정보 수정 완-->
+  <div class="myProfileModify ModifyPopup">
+    <h3 class="title">내 프로필 수정</h3>
+    <div class="popup__close">
+      <a href=""></a>
+    </div>
+    <div class="overflow">
+      <div class="profileWrap clear_fix">
+        <div class="profileWrap__img">
+          <img src="" alt="" class="mainimg">
+          <img src="" alt="" class="subimg">
+          <ul class="uploadingImg">
+            <li>사진 변경</li>
+          </ul>
+        </div>
+      </div>
+      <h4>기본정보</h4>
+      <div class="PersonInformation">
+        <table>
+          <tr>
+            <td class="wt80">이름</td>
+            <td>
+              <input type="text" name="" id="">
+            </td>
+            <td class="wt80">가문</td>
+            <td>
+              <input type="text" name="" id="">
+            </td>
+          </tr>
+          <tr>
+            <td class="wt80">연락처</td>
+            <td>
+              <input type="text" name="" id="">
+            </td>
+            <td class="wt80">세손</td>
+            <td>
+              <input type="text" name="" id="">
+            </td>
+          </tr>
+          <tr>
+            <td class="wt80">이메일</td>
+            <td>
+              <input type="email" name="" id="">
+            </td>
+            <td class="wt80">이메일</td>
+            <td>
+              <input type="text" name="" id="">
+            </td>
+          </tr>
+          <tr>
+            <td class="wt80">주소</td>
+            <td colspan="3">
+              <input type="text" name="" id="" class="address">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <h4>기념일</h4>
+      <div class="anniversary">
+        <table>
+          <tr>
+            <td class="wt100">생년월일</td>
+            <td colspan="3" class="t">
+              <input type="date" name="" id="">
+            </td>
+            <td class="wt50">
+              <a href="" class="modifyBtn">수정</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="wt100">기념일</td>
+            <td>
+              <input type="text" name="" id="">
+            </td>
+            <td>
+              <input type="date" name="" id="">
+            </td>
+            <td class="wt50">
+              <a href="" class="modifyBtn">삭제</a>
+            </td>
+            <td>
+              <a href="" class="modifyBtn">수정</a>
+            </td>
+          </tr>
+        </table>
+        <button class="addBtn">기념일 추가</button>
+      </div>
+    </div>
+    <div class="checkBtn">
+      <button class="modifyBtn">확인</button>
+      <button>취소</button>
+    </div>
+  </div>
+  <!-- 패밀리카드 수정 완-->
+  <div class="familyCardModify ModifyPopup">
+    <h3>가족카드 정보 수정</h3>
+    <div class="popup__close">
+      <a href=""></a>
+    </div>
+    <div class="overflow">
+      <div class="profileWrap clear_fix">
+        <div class="profileWrap__img">
+          <img src="" alt="" class="mainimg">
+          <img src="" alt="" class="subimg">
+          <ul class="uploadingImg">
+            <li>사진 변경</li>
+          </ul>
+        </div>
+        <div class="profileWrap__anoterInfo">
+          <p>
+            <span class="wt100">본관 및 종파</span>
+            <input type="text" name="" id="">
+            <!-- <span>남양홍씨 문정공파</span> -->
+          </p>
+          <p>
+            <span class="wt100">세 손</span>
+            <input type="text" name="" id="">
+            <!-- <span>15세손</span> -->
+          </p>
+          <p>
+            <span class="wt100">나와의 관계</span>
+            <input type="text" name="" id="">
+            <!-- <span>여동생</span> -->
+          </p>
+          <p class="button">
+            <span class="wt100">성별</span>
+            <button class="on">남성</button>
+            <button>여성</button>
+          </p>
+        </div>
+      </div>
+      <h4>기본정보</h4>
+      <div class="PersonInformation clear_fix">
+        <div class="PersonInformation__basic">
+          <span class="wt60">이름</span>
+          <input type="text" name="" id="">
+          <span class="wt60">연락처</span>
+          <input type="text" name="" id="">
+          <span class="wt60">이메일</span>
+          <input type="text" name="" id="">
+        </div>
+        <div class="PersonInformation__address">
+          <h5>주소</h5>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+      <h4>기념일</h4>
+      <div class="anniversary">
+        <table>
+          <tr>
+            <td class="wt100">생년월일</td>
+            <td colspan="3" class="t">
+              <!-- <input type="date" name="" id=""> -->
+              <input type="text" id="txtDate0" />
+            </td>
+            <td class="wt50">
+              <a href="" class="modifyBtn">수정</a>
+            </td>
+          </tr>
+          <tr>
+            <td class="wt100">기념일</td>
+            <td>
+              <input type="text" name="" id="">
+            </td>
+            <td class="wt100">
+              <!-- <input type="date" name="" id=""> -->
+              <input type="text" id="txtDate1" />
+            </td>
+            <td class="wt50">
+              <a href="" class="modifyBtn">삭제</a>
+            </td>
+            <td class="wt50">
+              <a href="" class="modifyBtn">수정</a>
+            </td>
+          </tr>
+        </table>
+        <button class="addBtn">기념일 추가</button>
+      </div>
+      <h4>추가정보</h4>
+      <div class="moreInfo">
+        <div class="dead clear_fix">
+          <div class="dead__Left">
+            <p>생존한 인물입니까?</p>
+            <span>사망을 선택하면 해당 인물이 조상으로 표시되며, <br>기일정보와 묘지정보가 추가됩니다.</span>
+          </div>
+          <div class="dead__Right">
+            <button class="on">생 존</button>
+            <button>사 망</button>
+          </div>
+        </div>
+      </div>
+      <div class="date">
+        <span class="wt80">기 일</span>
+        <!-- <input type="date" name="" id=""> -->
+        <input type="text" id="txtDate2" />
+        <button class="modifyBtn">수정</button>
+      </div>
+      <div class="tombLoaction">
+        <span>산소 위치</span>
+        <input type="text" name="" id="">
+        <span class="tip">산소 찾기는 산소찾기 메뉴에서 수정가능합니다.</span>
+      </div>
+      <div class="tombAround">
+        <h5>산소 주변 사진</h5>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <div class="wrap clear_fix">
+          <input type="text" name="" id="">
+          <button class="addBtn">사진 추가</button>
+        </div>
+      </div>
+    </div>
+    <div class="checkBtn">
+      <button class="modifyBtn">확인</button>
+      <button>취소</button>
+    </div>
+  </div>
+
+  <!-- 지도에서 핀 클릭시 나오는 핀 팝업 완-->
+  <div class="pinCheckedTomb TombPopup">
+    <div class="popup__close">
+      <a href=""></a>
+    </div>
+    <div class="Wrap">
+      <p>홍균성</p>
+      <span>경기 용인시 처인구 원삼면 수정로 6번길 43</span>
+    </div>
+    <div class="btnWrap">
+      <button class="detail_button">상세보기</button>
+    </div>
+  </div>
+
+  <!-- 지도 클릭시 나오는 핀 팝업 완-->
+  <div class="pinTomb TombPopup">
+    <div class="popup__close">
+      <a href=""></a>
+    </div>
+    <div class="Wrap">
+      <span>경기 용인시 처인구 원삼면 수정로 6번길 43</span>
+    </div>
+    <div class="btnWrap">
+      <button class="detail_button">산소등록</button>
+      <button class="detail_button">등록취소</button>
+    </div>
+  </div>
+
+  <!-- 목록에서 등록된 산소에서 산소정보 클릭시 나오는 팝업 완 -->
+  <div class="infoTomb TombPopup">
+    <h3>산소 정보</h3>
+    <div class="popup__close">
+      <a href=""></a>
+    </div>
+    <div class="Wrap">
+      <p>홍균성</p>
+      <span>경기 용인시 처인구 원삼면 수정로6번길 43</span>
+    </div>
+    <h4>산소 주인 정보</h4>
+    <ul class="basicInfo">
+      <li class="die clear_fix">
+        <img src="" alt="">
+        <span class="name">홍균성</span>
+        <span class="year">1920 ~ 1990</span>
+        <p>남양홍씨 문정공파</p>
+        <button class="detail_button">가족카드</button>
+      </li>
+    </ul>
+    <div class="tombImgWrap clear_fix">
+      <h5>산소 주변 사진</h5>
+      <img src="" alt="">
+      <img src="" alt="">
+      <img src="" alt="">
+    </div>
+    <div class="btnWrap">
+      <button>공유</button>
+      <button>정보수정</button>
+    </div>
+  </div>
+
+  <!-- 묘지 등록 -->
+  <div class="registTomb TombPopup">
+    <h3>산소등록</h3>
+    <div class="popup_close">
+      <a href=""></a>
+    </div>
+    <input type="search" name="" id="" placeholder="검색">
+    <h4>누구의 산소인가요?</h4>
+    <ul class="basicInfo">
+      <li class="die clear_fix">
+        <img src="" alt="">
+        <span class="name">홍균성</span>
+        <span class="year">1920 ~ 1990</span>
+        <p>남양홍씨 문정공파</p>
+        <label for="registSelect01">
+          <input type="radio" name="registSelect" id="registSelect01">
+          <span></span>
+        </label>
+      </li>
+      <li class="die clear_fix">
+        <img src="" alt="">
+        <span class="name">홍균성</span>
+        <span class="year">1920 ~ 1990</span>
+        <p>남양홍씨 문정공파</p>
+        <label for="registSelect02">
+          <input type="radio" name="registSelect" id="registSelect02">
+          <span></span>
+        </label>
+      </li>
+    </ul>
+    <div class="btnWrap">
+      <button class="detail_button">산소로 등록</button>
+    </div>
+  </div>
+
+  <!-- 묘지 수정 -->
+  <div class="insertTomb TombPopup">
+    <h3>산소 수정</h3>
+    <div class="popup__close">
+      <a href=""></a>
+    </div>
+    <div class="overflow">
+      <h4>산소 주인 변경</h4>
+      <input type="search" name="" id="" placeholder="검색">
+      <ul class="basicInfo">
+        <li class="die clear_fix">
+          <img src="" alt="">
+          <span class="name">홍균성</span>
+          <span class="year">1920 ~ 1990</span>
+          <p>남양홍씨 문정공파</p>
+          <label for="insertSelect01">
+            <input type="radio" name="insertSelect" id="insertSelect01">
+            <span></span>
+          </label>
+        </li>
+        <li class="die clear_fix">
+          <img src="" alt="">
+          <span class="name">홍균성</span>
+          <span class="year">1920 ~ 1990</span>
+          <p>남양홍씨 문정공파</p>
+          <label for="insertSelect01">
+            <input type="radio" name="insertSelect" id="insertSelect01">
+            <span></span>
+          </label>
+        </li>
+      </ul>
+      <div class="tombImgWrap clear_fix">
+        <h5>산소 주변 사진</h5>
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+        <img src="" alt="">
+      </div>
+      <button class="addBtn">사진 추가</button>
+    </div>
+    <div class="btnWrap">
+      <button class="detail_button">확인</button>
+      <button>취소</button>
+    </div>
+  </div>
+
+  <header class="clear_fix">
+    <h1>가족나무</h1>
+    <div class="header__hamberMenu" id="hamberMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <span>메뉴</span>
+    <div class="header__alert">
+    </div>
+    <div class="header__tooltip">
+      <p class="title">알림
+        <div>
+          <a href="#/" class="close"></a>
+        </div>
+      </p>
+      <ul>
+        <li>
+          <p>홍균희님이 남양홍씨 친족가계도의 부운영자가 되었습니다.</p>
+          <span>남양홍씨</span>
+          <span>2018년 4월 20일</span>
+        </li>
+        <li>
+          <p>홍규희님이 남양홍씨 친족가계도의 부운영자를 신청했습니다.</p>
+          <span>남양홍씨</span>
+          <span>2018년 4월 17일</span>
+        </li>
+        <li>
+          <p>홍균희님과 친구가 되었습니다.</p>
+          <span>남양홍씨</span>
+          <span>2018년 4월 5일</span>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="contentWrap clear_fix">
+    <nav>
+      <div class="profile clear_fix">
+        <span class="profile__myImg img1">
+          <img src="/git_familyTree_pc/assets/img/new-icon-man.png" alt="내 프로필">
+        </span>
+        <span class="profile__myName">홍길동</span>
+        <div class="profile__myRootName">남양 홍씨</div>
+        <div class="profile__myStreet">문정공파 33세손</div>
+        <div class="profile__myCall">010-0000-0000</div>
+      </div>
+      <ul class="menuList">
+        <li class="my_tree">
+          <a href="">내 가계도</a>
+        </li>
+        <li class="my_friend">
+          <a href="">나의 인맥</a>
+        </li>
+        <li class="my_chatt">
+          <a href="">채팅</a>
+        </li>
+        <li class="tomb">
+          <a href="">산소 찾기</a>
+        </li>
+        <li class="manner ">
+          <a href="">가계 예절</a>
+        </li>
+        <li class="editInfo none">
+          <a href="">정보 수정</a>
+        </li>
+        <li class="Log none">
+          <a href="">로그아웃</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="mainContent">
+      <article class="main block">
+        <div class="myTreeImg"></div>
+        <ul class="myTreeMenu clear_fix">
+          <li>
+            <a href="#/">내 가계도</a>
+          </li>
+
+          <li>
+            <a href="#/">나의 인맥</a>
+          </li>
+          <li>
+            <a href="#/">채팅</a>
+          </li>
+          <li>
+            <a href="#/">산소찾기</a>
+          </li>
+          <li>
+            <a href="#/">가계예절</a>
+          </li>
+          <li>
+            <a href="#/">일정</a>
+          </li>
+        </ul>
+      </article>
+
+
+      <!-- 가계도 -->
+      <!-- 아내 추가는 .person 형제로 .person추가 -->
+      <!-- 형제 추가는 상위의 .hv-item-child 추가 -->
+      <!-- 자식 추가는 this 상위의 .hv-item-parent의 형제로 .hv-item-child>.ht-item(자식인경우)>.hv-item-child.person -->
+      <div class="myTreeWrap">
+        <div class="myTree" id="text">
+          <div class="management-hierarchy">
+            <div class="hv-container">
+              <div class="hv-wrapper">
+                <!-- Key component -->
+                <div class="hv-item">
+                  <div class="hv-item-parent">
+                    <div class="person mainML die">
+                      <p>홍균명</p>
+                      <img src="img/new-icon-man.png" alt="" ondragstart="return false">
+                      <p class="name">
+                        나
+                        <span>15</span>
+                      </p>
+                    </div>
+                    <div class="person subML">
+                      <p>이미정</p>
+                      <img src="img/new-icon-woman.png" alt="" ondragstart="return false">
+                      <p class="name">
+                        모
+                      </p>
+                    </div>
+                  </div>
+                  <div class="hv-item-children">
+                    <div class="hv-item-child">
+                      <div class="person">
+                        <p>홍균성</p>
+                        <img src="img/new-icon-man.png" alt="" ondragstart="return false">
+                        <p class="name">
+                          아내
+                        </p>
+                      </div>
+                    </div>
+                    <div class="hv-item-child">
+                      <!-- Key component -->
+                      <div class="hv-item-parent">
+
+                        <div class="person my">
+                          <p>홍dd균성</p>
+                          <img src="img/new-icon-man.png" alt="" ondragstart="return false">
+                          <p class="name">
+                            나
+                          </p>
+                        </div>
+                        <div class="person">
+                          <p>홍균성</p>
+                          <img src="img/new-icon-woman.png" alt="" ondragstart="return false">
+                          <p class="name">
+                            아내
+                          </p>
+                        </div>
+                      </div>
+                      <div class="hv-item-children">
+                        <div class="hv-item-child">
+                          <div class="hv-item-parent">
+                            <div class="hv-item-children">
+                              <div class="hv-item-child">
+                                <div class="person">
+                                  <p>홍균성11</p>
+                                  <img src="img/new-icon-woman.png" alt="" ondragstart="return false">
+                                  <p class="name">
+                                    직급1
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="hv-item-children">
+                            <div class="hv-item-child">
+                              <div class="person">
+                                aaaaa
+                              </div>
+                            </div>
+                            <div class="hv-item-child">
+                              <div class="person">
+                                aaaaa
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="hv-item-child">
+                          <div class="hv-item-parent">
+                            <div class="person">
+                              <p>홍균dd성</p>
+                              <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="" ondragstart="return false">
+                              <p class="name">
+                                아내
+                              </p>
+                            </div>
+                          </div>
+                          <div class="hv-item-children">
+                            <div class="hv-item-child">
+                              <div class="person">
+                                <p>111-222</p>
+                                <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="" ondragstart="return false">
+                                <p class="name">
+                                  아내
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="hv-item-child">
+                          <div class="person">
+                            <p>홍균성1</p>
+                            <img src="https://randomuser.me/api/portraits/women/18.jpg" alt="" ondragstart="return false">
+                            <p class="name">
+                              Mary Bower
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hv-item-child">
+                      <!-- Key component -->
+                      <div class="hv-item-parent">
+                        <div class="person">
+                          <img src="https://randomuser.me/api/portraits/men/3.jpg" alt="" ondragstart="return false">
+                          <p class="name">
+                            동생
+                          </p>
+                        </div>
+                      </div>
+                      <div class="hv-item-children">
+                        <div class="hv-item-child">
+                          <div class="person">
+                            <img src="https://randomuser.me/api/portraits/men/41.jpg" alt="" ondragstart="return false">
+                            <p class="name">
+                              Harry Bell
+                            </p>
+                          </div>
+                        </div>
+                        <div class="hv-item-child">
+                          <div class="person">
+                            <img src="https://randomuser.me/api/portraits/men/90.jpg" alt="" ondragstart="return false">
+                            <p class="name">
+                              Matt Davies
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="hv-item-child">
+                      형제
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relationSearch">
+        <h3>나의 인맥</h3>
+        <div class="popup__close">
+          <a href=""></a>
+        </div>
+        <div class="chatt__mypc">
+          <div class="chatt__pclist">
+            <!--personal conection-->
+            <ul>
+
+            </ul>
+          </div>
+          <p>가족나무 웹에서는 요청이 들어온 인맥만
+            <br>확인할 수 있습니다. 앱에 가입된 나의 인맥을
+            <br> 찾으려면 가족나무 앱을 설치해주시길 바랍니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="chatt">
+        <div class="chatt__title">
+          <h3>채팅목록</h3>
+          <div class="popup__close">
+            <a href=""></a>
+          </div>
+        </div>
+        <div class="chatt__tablist active">
+          <div class="chatt__search">
+            <label for="">
+              <input type="search" name="" id="" placeholder="검색">
+            </label>
+          </div>
+        </div>
+
+        <div class="chatt__tab">
+          <ul class="clear_fix">
+            <li>인맥</li>
+            <li class="on">목록</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tombSearch">산소 찾기</div>
+      <div class="manner">가계 예절</div>
+
+
+      <div class="calendar" id="calendar">
+
+      </div>
+
+      <div class="log"></div>
+    </section>
+
+    <aside>
+      <!-- 알림 메뉴 -->
+      <div class="alertNewWrap block sideMenu">
+        <div class="alerttopNew">새소식 알림</div>
+        <ul class="day">
+          <li>
+            <div class="title">[기념일]</div>
+            <span class="content">홍규식님의 기일입니다.</span>
+            <span class="date">남양홍씨 문정공파 / 매년 7월 30일</span>
+          </li>
+          <li>
+            <div class="title">[기념일]</div>
+            <span class="content">홍규식님의 기일입니다.</span>
+            <span class="date">남양홍씨 문정공파 / 매년 7월 30일</span>
+          </li>
+          <li>
+            <div class="title">[통합공지]</div>
+            <span class="content">가족나무 웹버전 기능개선 안내</span>
+            <span class="date">2018년 4월 10일</span>
+          </li>
+        </ul>
+      </div>
+      <!-- 가계도 메뉴 -->
+      <!-- <link rel="import" href="aside_familyInfo.html"> -->
+      <div class="family sideMenu">
+        <div class="familyInfo">
+          <h3>가계도 정보 안내</h3>
+          <div class="content">
+            <span>남양홍씨</span>
+            <span>문정공파</span>
+            <span class="db">안녕하십니까. 자랑스러운 남양 홍씨의 가계도에 오신걸 환영합니다.</span>
+          </div>
+          <h3></h3>
+          <ul class="familyEtc">
+            <li>
+              <a href="">가문 정보 보기</a>
+            </li>
+            <li>
+              <a href="">일정 보기</a>
+            </li>
+          </ul>
+          <h3>운영자</h3>
+          <div class="familyMaster">
+            <div class="img"></div>
+            <span class="name">홍균성</span>
+          </div>
+          <h3>부운영자</h3>
+          <ul class="familyMasterSub">
+            <li>
+              <a href="">
+                <div class="img"></div>
+                <span>부운영자 초대하기</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img"></div>
+                <span>홍균명</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img"></div>
+                <span>이미정</span>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img"></div>
+                <span>홍길동</span>
+              </a>
+            </li>
+          </ul>
+          <h3>알람 및 일정</h3>
+          <ul class="day">
+            <li>
+              <div class="title">[기념일]</div>
+              <span class="content">홍규식님의 기일입니다.</span>
+              <span class="date">친가 / 매년 7월 30일</span>
+            </li>
+            <li>
+              <div class="title">[기념일]</div>
+              <span class="content">홍규식님의 기일입니다.</span>
+              <span class="date">친가 / 매년 7월 30일</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 달력 메뉴 -->
+      <div class="calendarSide sideMenu">
+        <div class="alerttopNew">일정 추가</div>
+        <div class="scheduleAdd">
+          <span class="title">일정 이름</span>
+          <input type="text" name="" id="">
+          <span class="title">일정 종류</span>
+          <select name="" id="">
+            <option value="기념일">기념일</option>
+            <option value="기념일">기념일</option>
+            <option value="기념일">기념일</option>
+            <option value="기념일">기념일</option>
+          </select>
+          <div class="startDate datePicker">
+            <span>시작 날짜</span>
+            <select name="" id="">
+              <option value="양력">양력</option>
+              <option value="음력">음력</option>
+            </select>
+            <input type="date" name="" id="">
+            <input type="time" name="" id="">
+            <button class="always"></button>
+          </div>
+          <div class="endDate datePicker">
+            <span>종료 날짜</span>
+            <select name="" id="">
+              <option value="양력">양력</option>
+              <option value="음력">음력</option>
+            </select>
+            <input type="date" name="" id="">
+            <input type="time" name="" id="">
+          </div>
+          <h5>반복되는 일정인가요?</h5>
+          <select name="" id="">
+            <option value="매년 반복">매년 반복</option>
+          </select>
+          <button class="addBtn">중심인물 선택</button>
+          <button class="addBtn">중심인물 선택</button>
+          <button class="detail_button">추가</button>
+        </div>
+        <div class="alerttopNew">일정 상세목록</div>
+        <ul class="day">
+          <li>
+            <div class="title">기념일</div>
+            <span class="content">홍규식님의 기일</span>
+            <span class="date">매년 음력 7월 30일</span>
+          </li>
+        </ul>
+      </div>
+      <div class="searchTomb sideMenu">
+        <div class="alerttopNew">
+          새소식 알림
+        </div>
+        <input type="search" name="" id="" placeholder="검색">
+        <div class="alerttopNew">현재 위치에서 검색된 산소</div>
+        <ul class="searchedTomb">
+          <li>
+            <div class="img">
+              <span class="numbered">A</span>
+            </div>
+            <div class="text">
+              <div>홍균성1</div>
+              <span>경기 용인시 처인구 원삼면 수정로 6번길 41</span>
+              <a href="">상세보기</a>
+            </div>
+          </li>
+          <li>
+            <div class="img">
+              <span class="numbered">A</span>
+            </div>
+            <div class="text">
+              <div>홍균성1</div>
+              <span>경기 용인시 처인구 원삼면 수정로 6번길 41</span>
+              <a href="">상세보기</a>
+            </div>
+          </li>
+          <li>
+            <div class="img">
+              <span class="numbered">A</span>
+            </div>
+            <div class="text">
+              <div>홍균성1</div>
+              <span>경기 용인시 처인구 원삼면 수정로 6번길 41</span>
+              <a href="">상세보기</a>
+            </div>
+          </li>
+          <li>
+            <div class="img">
+              <span class="numbered">A</span>
+            </div>
+            <div class="text">
+              <div>홍균성1</div>
+              <span>경기 용인시 처인구 원삼면 수정로 6번길 41</span>
+              <a href="">상세보기</a>
+            </div>
+          </li>
+        </ul>
+        <button class="registTombBtn">산소 등록</button>
+      </div>
+      <!-- <div class="showBottomCalender"> -->
+      <div class="CalendarButton">일정 보기
+      </div>
+      <!-- </div> -->
+    </aside>
+  </div>
+<script>
+  $(document).ready(function() {
+  $('#txtDate0').datepicker({
+    showAnim: 'slide',
+    dateFormat: 'dd-mm-yy',
+  });
+  $('#txtDate1').datepicker({
+    showAnim: 'slide',
+    dateFormat: 'dd-mm-yy',
+  });
+  $('#txtDate2').datepicker({
+    showAnim: 'slide',
+    dateFormat: 'dd-mm-yy',
+  });
+});
+</script>
+  <script async src="/assets/js/common.js"></script>
+  <!-- 선언 js -->
+  <script async src="/assets/js/func.js"></script>
+  <!-- 실행 js -->
+  <script async src="/assets/js/exec.js"></script>
+  <script async src="/assets/js/lib/draggable.js"></script>
+  <script src="/assets/js/lib/wheelzoom.js"></script>
+  <script>
+    wheelzoom(document.querySelector('.myTree'));
+  </script>
+</body>
+
+</html>

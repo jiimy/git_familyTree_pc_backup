@@ -1,0 +1,24 @@
+.insertTomb {
+  display: none;
+
+  width: 400px;
+  z-index: 1;
+  background: #fff;
+  position: absolute !important;
+  .overflow{
+    max-height:455px;
+  }
+  .tombImgWrap{
+    padding-bottom:10px;
+  }
+  
+  .btnWrap {
+    button {
+      font: 400 14px 'NS';
+      background: #fff;
+      padding: 10px 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+}

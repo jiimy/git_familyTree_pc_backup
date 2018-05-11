@@ -1,0 +1,1015 @@
+@charset "UTF-8";
+/* 버튼 설정 */
+.ok_button {
+  font: 400 14px 'NS';
+  background: #ffff00;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cancle_button {
+  font: 400 14px 'NS';
+}
+
+.detail_button {
+  font: 400 14px 'NS';
+  background: #ffff00 !important;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.addBtn {
+  width: 96%;
+  text-align: center;
+  padding: 10px 0;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  background: #f7f6f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addBtn:before {
+  content: '+ ';
+}
+
+.addBtn .always {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+}
+
+/* popup폴더*/
+.myProfileModify {
+  display: none;
+  position: absolute;
+  background: #fff;
+  width: 600px;
+  height: 720px;
+  z-index: 1;
+  border: 1px solid #efefef;
+}
+
+.myProfileModify .overflow {
+  height: 607px;
+}
+
+.myProfileModify .profileWrap .profileWrap__anoterInfo {
+  padding: 30px 0 0 30px;
+}
+
+.myProfileModify .profileWrap .profileWrap__anoterInfo .button {
+  margin-top: 30px;
+}
+
+.myProfileModify .profileWrap .profileWrap__anoterInfo .button button {
+  width: 80px;
+  height: 20%;
+  font: 400 14px 'NS';
+  color: white;
+}
+
+.myProfileModify .profileWrap .profileWrap__anoterInfo .button button:nth-child(1) {
+  background: yellow;
+}
+
+.myProfileModify .profileWrap .profileWrap__anoterInfo .button button:nth-child(2) {
+  background: #1DC800;
+}
+
+.myProfileModify .profileWrap .profileWrap__anoterInfo .button button:nth-child(3) {
+  background: #dd4f43;
+}
+
+.myProfileModify .profileWrap .profileWrap__anoterInfo .button button:nth-child(4) {
+  background: #3b589e;
+}
+
+.myProfileModify .profileWrap .profileWrap__anoterInfo .button button.on {
+  background: #eee;
+  color: #ccc;
+}
+
+.myProfileModify .profileWrap .profileWrap__anoterInfo p:nth-child(2) {
+  margin-top: 8px;
+}
+
+.myProfileModify .PersonInformation {
+  padding: 20px 15px 15px 15px;
+}
+
+.myProfileModify .PersonInformation td:nth-child(2n) {
+  width: 38%;
+}
+
+.myProfileModify .PersonInformation input {
+  width: 92%;
+  padding: 8px 10px;
+  font: 500 14px 'NS';
+  margin-bottom: 10px;
+}
+
+.myProfileModify .PersonInformation input.address {
+  width: 97%;
+}
+
+.myProfileModify .anniversary input[type=text] {
+  width: 50%;
+}
+
+.familyCardModify {
+  display: none;
+  position: absolute;
+  background: #fff;
+  width: 600px;
+  z-index: 10;
+  border: 1px solid #efefef;
+}
+
+.familyCardModify div.overflow {
+  height: 740px;
+}
+
+.familyCardModify .button {
+  margin-top: 10px;
+}
+
+.familyCardModify .button button {
+  width: 95px;
+  text-align: center;
+  height: 30px;
+  color: #bbb;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.familyCardModify .button button.on {
+  background: #ff6868;
+  color: white;
+  border: none;
+}
+
+.ModifyPopup .profileWrap {
+  height: 165px;
+}
+
+.ModifyPopup .profileWrap .profileWrap__anoterInfo {
+  float: left;
+  padding: 15px;
+  font: 300 14px 'NS';
+  width: 57%;
+}
+
+.ModifyPopup .profileWrap .profileWrap__anoterInfo p {
+  margin-bottom: 5px;
+}
+
+.ModifyPopup .profileWrap .profileWrap__anoterInfo span {
+  display: inline-block;
+  font: 500 14px 'NS';
+}
+
+.ModifyPopup .profileWrap .profileWrap__anoterInfo span.wt100 {
+  font: 300 14px 'NS';
+}
+
+.ModifyPopup .PersonInformation .PersonInformation__basic {
+  border-right: 1px solid #ccc;
+  float: left;
+  width: 300px;
+  padding: 25px 15px;
+  font-family: 'NS';
+}
+
+.ModifyPopup .PersonInformation .PersonInformation__basic span {
+  display: inline-block;
+  font: 300 16px 'NS';
+}
+
+.ModifyPopup .PersonInformation .PersonInformation__basic input {
+  width: 75%;
+  padding: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #ccc;
+  font: 400 14px 'NS';
+}
+
+.ModifyPopup .PersonInformation .PersonInformation__address {
+  float: left;
+  padding: 15px 10px;
+}
+
+.ModifyPopup .PersonInformation .PersonInformation__address h5 {
+  font: 400 14px 'NS';
+  color: #6d6d6d;
+}
+
+.ModifyPopup .PersonInformation .PersonInformation__address textarea {
+  resize: none;
+  font: 400 14px 'NS';
+  margin-top: 10px;
+  width: 250px;
+  height: 90px;
+  padding: 15px 5px;
+  border: 1px solid #ccc;
+}
+
+.ModifyPopup .moreInfo {
+  border-bottom: 1px solid #ccc;
+  padding: 20px 20px;
+}
+
+.ModifyPopup .moreInfo .dead__Left {
+  float: left;
+  font: 500 16px 'NS';
+}
+
+.ModifyPopup .moreInfo .dead__Left p {
+  margin-bottom: 10px;
+  color: #505050;
+}
+
+.ModifyPopup .moreInfo .dead__Left span {
+  display: inline-block;
+  font: 300 12px/130% 'NS';
+  color: #6d6d6d;
+}
+
+.ModifyPopup .moreInfo .dead__Right {
+  float: left;
+}
+
+.ModifyPopup .moreInfo .dead__Right button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  color: #6d6d6d;
+  text-align: center;
+  padding: 10px 55px;
+  font: 300 15px 'NS';
+}
+
+.ModifyPopup .moreInfo .dead__Right button.on {
+  background: #505050;
+  color: white;
+}
+
+.ModifyPopup .date {
+  padding: 10px 10px 10px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.ModifyPopup .date span {
+  display: inline-block;
+}
+
+.ModifyPopup .date input {
+  width: 74%;
+  padding: 4px 10px;
+}
+
+.ModifyPopup .tombLoaction {
+  padding: 10px 15px;
+  font: 300 16px 'NS';
+}
+
+.ModifyPopup .tombLoaction span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ModifyPopup .tombLoaction input {
+  width: 100%;
+  padding: 10px 10px;
+}
+
+.ModifyPopup .tombLoaction .tip {
+  font: 300 13px 'NS';
+  text-align: right;
+}
+
+.ModifyPopup .tombAround {
+  border-top: 1px solid #ccc;
+  padding: 20px 10px;
+}
+
+.ModifyPopup .tombAround h5 {
+  margin-bottom: 12px;
+}
+
+.ModifyPopup .tombAround img {
+  width: 19%;
+  height: 109px;
+  background: #000;
+  display: inline-block;
+}
+
+.ModifyPopup .tombAround .wrap input {
+  float: left;
+  width: 70%;
+  margin-top: 6px;
+  height: 33px;
+}
+
+.ModifyPopup .tombAround .wrap .addBtn {
+  margin: 5px 0 0 10px;
+  width: 20%;
+  float: left;
+}
+
+.ModifyPopup h4 {
+  height: 25px;
+  background: #f0f0f0;
+  font: 300 13px 'NS';
+  padding-left: 15px;
+  line-height: 25px;
+}
+
+.ModifyPopup input {
+  width: 64%;
+  border: 1px solid #ccc;
+}
+
+.ModifyPopup .overflow .profileWrap__img {
+  position: relative;
+  float: left;
+  width: 215px;
+  height: 100%;
+  border-right: 1px solid #ccc;
+}
+
+.ModifyPopup .overflow .profileWrap__img .mainimg {
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: #000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ModifyPopup .overflow .profileWrap__img .subimg {
+  width: 30px;
+  height: 30px;
+  background: yellow;
+  position: absolute;
+  border-radius: 50%;
+  right: 26%;
+  bottom: 20%;
+}
+
+.ModifyPopup .overflow .profileWrap__img .subimg:hover {
+  cursor: pointer;
+}
+
+.ModifyPopup .overflow .profileWrap__img .uploadingImg {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background: #fff;
+  font: 300 14px 'NS';
+  border: 1px solid #ccc;
+  bottom: -28px;
+  right: -53px;
+}
+
+.ModifyPopup .overflow .profileWrap__img .uploadingImg li {
+  padding: 5px 8px;
+  cursor: pointer;
+}
+
+.ModifyPopup .overflow .anniversary {
+  padding: 15px 5px 0 5px;
+}
+
+.ModifyPopup .overflow .anniversary table {
+  width: 96%;
+  margin: 15px 10px 0px 15px;
+}
+
+.ModifyPopup .overflow .anniversary table tr {
+  height: 40px;
+}
+
+.ModifyPopup .overflow .anniversary table .t input {
+  width: 98% !important;
+}
+
+.ModifyPopup .overflow .anniversary table input[type=text] {
+  height: 33px;
+  width: 96%;
+  padding: 0px 5px;
+}
+
+.ModifyPopup .overflow .anniversary table input[type=date] {
+  height: 33px;
+  padding: 0px 5px;
+  width: 96%;
+}
+
+.ModifyPopup .overflow .anniversary .addBtn {
+  width: 96%;
+  text-align: center;
+  padding: 10px 0;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  background: #f7f6f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ModifyPopup .overflow .anniversary .addBtn:before {
+  content: '+ ';
+}
+
+.ModifyPopup .checkBtn {
+  border-top: 1px solid #ccc;
+  background: #fff;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.ModifyPopup button {
+  background: #fff;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  font: 400 12px 'NS';
+  border-radius: 5px;
+}
+
+.ModifyPopup .modifyBtn {
+  background: #ffff00;
+  padding: 7px 10px;
+  border: 1px solid #ccc;
+  font: 400 12px 'NS';
+  border-radius: 5px;
+}
+
+/* 산소 */
+/* 산소에서 클릭시 핀과 함께 나오는 팝업 */
+/* 공통-목록부분 */
+.TombPopup .Wrap {
+  padding: 20px 20px 10px 20px;
+}
+
+.TombPopup .Wrap p {
+  font: 400 20px 'NS';
+  margin-bottom: 5px;
+}
+
+.TombPopup .Wrap p:after {
+  content: '씨 산소';
+}
+
+.TombPopup .Wrap span {
+  font: 300 14px 'NS';
+  margin-bottom: 10px;
+  display: block;
+}
+
+.TombPopup h4 {
+  padding: 7px 15px;
+  background: #f0f0f0;
+  font: 400 12px 'NS';
+  color: #505050;
+}
+
+.TombPopup .btnWrap {
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.TombPopup input[type=search] {
+  width: 100%;
+  border: none;
+  padding: 15px 30px 15px 20px;
+  background: url("../../../../img/ic_search2.png") 97% 17px no-repeat;
+  font: 400 14px 'NS';
+  border-bottom: 1px solid #ccc;
+}
+
+.tombImgWrap {
+  border-top: 1px solid #ccc;
+  padding: 15px 18px 50px 18px;
+  text-align: center;
+}
+
+.tombImgWrap h5 {
+  text-align: left;
+  font: 300 18px/100% 'NS';
+}
+
+.tombImgWrap img {
+  width: 110px;
+  height: 110px;
+  float: left;
+  background: #000;
+  margin-right: 15px;
+  margin-top: 15px;
+}
+
+.tombImgWrap img:nth-of-type(3n) {
+  margin-right: 0px;
+}
+
+.basicInfo li {
+  padding: 15px;
+  position: relative;
+}
+
+.basicInfo li img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #000;
+  float: left;
+}
+
+.basicInfo li span {
+  float: left;
+}
+
+.basicInfo li span.name {
+  color: #505050;
+  font: 500 18px 'NS';
+  margin-left: 15px;
+  margin-top: -3px;
+}
+
+.basicInfo li span.name:before {
+  content: '(故)';
+}
+
+.basicInfo li span.year {
+  font: 400 13px 'NS';
+  color: #959595;
+  margin: 4px 0 0 4px;
+}
+
+.basicInfo li span.year:before {
+  content: '(';
+}
+
+.basicInfo li span.year:after {
+  content: ')';
+}
+
+.basicInfo li label {
+  float: right;
+  cursor: pointer;
+}
+
+.basicInfo li label input[type=radio] {
+  display: none;
+}
+
+.basicInfo li label input[type=radio] + span {
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  display: inline-block;
+  border: 2px solid #FF6868;
+}
+
+.basicInfo li label input[type=radio]:checked + span {
+  background: url(/git_familyTree_pc/assets/img/check-on.png) center no-repeat;
+  background-color: #ffe0e0;
+}
+
+.basicInfo li p {
+  position: absolute;
+  left: 75px;
+  color: #959595;
+  font: 400 15px 'NS';
+  bottom: 13px;
+}
+
+.basicInfo li button {
+  float: right;
+}
+
+.pinTomb {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  width: 320px;
+  background: #fff;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.pinTomb .popup__close a {
+  width: 20px;
+  height: 20px;
+  background: url(/img/ic_win-close-b.png);
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.pinTomb button {
+  background: #fff;
+}
+
+.pinTomb button:hover {
+  background: #ffff00;
+}
+
+.pinTomb:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: 1;
+  left: 50%;
+  top: -10px;
+  box-shadow: -4px -5px 20px -2px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.pinCheckedTomb {
+  display: none;
+  position: absolute;
+  z-index: 2;
+  width: 320px;
+  background: #fff;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.pinCheckedTomb .popup__close a {
+  width: 20px;
+  height: 20px;
+  background: url(/img/ic_win-close-b.png);
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.pinCheckedTomb:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  transform: translateX(-50%) rotate(45deg);
+  z-index: 1;
+  left: 50%;
+  top: -10px;
+  box-shadow: -4px -5px 20px -2px rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+
+.infoTomb {
+  display: none;
+  width: 400px;
+  z-index: 1;
+  background: #fff;
+  position: absolute !important;
+}
+
+.infoTomb .btnWrap button {
+  font: 400 14px 'NS';
+  background: #fff;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.registTomb {
+  display: none;
+  background: #fff;
+  position: absolute !important;
+  width: 400px;
+  z-index: 1;
+  border: 1px solid #d0d0d0;
+}
+
+.insertTomb {
+  display: none;
+  width: 400px;
+  z-index: 1;
+  background: #fff;
+  position: absolute !important;
+}
+
+.insertTomb .overflow {
+  max-height: 455px;
+}
+
+.insertTomb .tombImgWrap {
+  padding-bottom: 10px;
+}
+
+.insertTomb .btnWrap button {
+  font: 400 14px 'NS';
+  background: #fff;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* aside 메뉴에서 시작날짜와 종료날짜 선택부분 */
+.datePicker span {
+  display: block;
+  margin: 5px 0 8px 0;
+}
+
+.datePicker select {
+  width: 60px;
+  height: 32px;
+}
+
+.datePicker input[type=date] {
+  height: 32px;
+  width: 78%;
+}
+
+.datePicker input[type=time] {
+  margin-top: 5px;
+  width: 130px;
+}
+
+/* 가족카드 정보보기 */
+.viewfamilyCard {
+  display: none;
+  width: 400px;
+  z-index: 10;
+  border: 1px solid #eee;
+  background: #fff;
+  position: absolute !important;
+}
+
+.viewfamilyCard .profile {
+  background: #9cd9d6;
+  color: white;
+  padding: 15px 30px 50px 30px;
+}
+
+.viewfamilyCard .profile .img {
+  float: left;
+  width: 100px;
+  height: 100px;
+  background: #000;
+  margin-right: 25px;
+  border-radius: 50%;
+}
+
+.viewfamilyCard .profile .text {
+  float: left;
+}
+
+.viewfamilyCard .profile .text .name {
+  font: 500 20px 'NS';
+}
+
+.viewfamilyCard .profile .text .gamun {
+  font: 300 14px 'NS';
+  margin: 5px 0px 8px 0px;
+}
+
+.viewfamilyCard .profile .text .relation {
+  font: 300 14px 'NS';
+}
+
+.viewfamilyCard .profile .text .relation:before {
+  content: '나와의 관계 :';
+}
+
+.viewfamilyCard .contentNav li {
+  float: left;
+  width: 33.3%;
+  padding: 20px 0;
+  text-align: center;
+  background: #ece8da;
+  color: black;
+  border-bottom: 5px solid #ece8da;
+  font: 500 16px 'NS';
+}
+
+.viewfamilyCard .contentNav li.active {
+  border-bottom: 5px solid #9cd9d6;
+}
+
+.viewfamilyCard .contentNav li:hover {
+  cursor: pointer;
+}
+
+.viewfamilyCard .info {
+  display: none;
+}
+
+.viewfamilyCard .info.tab1 ul li {
+  font: 500 16px 'NS';
+  padding: 16px 12px 16px 20px;
+  border-bottom: 2px solid #eee;
+}
+
+.viewfamilyCard .info.tab1 ul li p {
+  width: 90px;
+  color: #959595;
+  display: inline-block;
+}
+
+.viewfamilyCard .info.tab1 .day {
+  color: #505050;
+}
+
+.viewfamilyCard .info.tab1 .day .title {
+  font: 400 16px 'NS';
+}
+
+.viewfamilyCard .info.tab1 .day .content {
+  margin-top: -2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.viewfamilyCard .info.tab1 .day .date {
+  font: 400 14px 'NS';
+  color: #959595;
+}
+
+.viewfamilyCard .info.tab1 button {
+  width: 100%;
+  padding: 20px 0;
+  font: 500 16px 'NS';
+  color: #505050;
+  background: #fff;
+  text-align: center;
+}
+
+.viewfamilyCard .info.tab2 ul li {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  font: 400 16px 'NS';
+}
+
+.viewfamilyCard .info.tab2 ul li span {
+  display: inline-block;
+  width: 100px;
+  color: #959595;
+}
+
+.viewfamilyCard .info.tab2 ul li p {
+  display: inline-block;
+  color: #505050;
+}
+
+.viewfamilyCard .info.tab2 ul li:last-child {
+  border-bottom: none;
+}
+
+.viewfamilyCard .info.tab2 ul li.isAlive p {
+  font: 400 16px 'NS';
+}
+
+.viewfamilyCard .info.tab2 ul li.isAlive span.sub {
+  display: block;
+  width: 280px;
+  font: 300 13px 'NS';
+  margin-top: 5px;
+}
+
+.viewfamilyCard .info.tab2 ul li.isAlive .switch {
+  position: absolute;
+  width: 60px;
+  height: 10px;
+  top: 42%;
+  left: 82%;
+}
+
+.viewfamilyCard .info.tab2 ul li.isAlive .switch .switch-input {
+  position: fixed;
+  left: -99999px;
+}
+
+.viewfamilyCard .info.tab2 ul li.isAlive .switch .switch-input.switch-input:checked + .switch-track {
+  background-color: rgba(0, 150, 136, 0.5);
+}
+
+.viewfamilyCard .info.tab2 ul li.isAlive .switch-input:checked + .switch-track > .switch-thumb {
+  left: 15px;
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.3);
+  background-color: #009688;
+}
+
+.viewfamilyCard .info.tab2 ul li.isAlive .switch-track {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 35px;
+  height: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(0, 0, 0, 0.38);
+}
+
+.viewfamilyCard .info.tab2 ul li.isAlive .switch-track > .switch-thumb {
+  position: absolute;
+  content: "";
+  top: -3px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: left 200ms cubic-bezier(0.4, 0, 0.2, 1), background-color 200ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+  background-color: #FAFAFA;
+}
+
+.viewfamilyCard .info.tab2 h4 {
+  background: #f0f0f0;
+  padding-left: 10px;
+  font: 400 12px/25px 'NS';
+  color: #505050;
+}
+
+.viewfamilyCard .info.tab2 ul.tombInfo li .name2 {
+  display: block;
+  font: 500 18px 'NS';
+  color: #292929;
+}
+
+.viewfamilyCard .info.tab2 ul.tombInfo li .name2.name2 {
+  content: '님 산소';
+}
+
+.viewfamilyCard .info.tab2 ul.tombInfo li .address {
+  width: 80%;
+  font: 400 12px 'NS';
+}
+
+.viewfamilyCard .info.tab2 ul.tombInfo li .detail_button {
+  position: absolute;
+  right: 15px;
+  bottom: 20px;
+}
+
+.viewfamilyCard .info.tab3 .tabitem {
+  cursor: pointer;
+  width: 50%;
+  float: left;
+  text-align: center;
+  padding: 12px 0 15px 0;
+  font: 400 16px 'NS';
+  border-bottom: 1px solid #ccc;
+}
+
+.viewfamilyCard .info.tab3 .tabitem.active {
+  border-bottom: none;
+  font: 500 16px 'NS';
+}
+
+.viewfamilyCard .info.tab3 .tabitem.active:after {
+  content: '';
+  display: block;
+  border-bottom: 4px solid black;
+  padding-bottom: 12px;
+}
+
+.viewfamilyCard .info.tab3 .tabList {
+  display: none;
+}
+
+.viewfamilyCard .info.tab3 .tabList .pictureWrap {
+  padding: 15px;
+}
+
+.viewfamilyCard .info.tab3 .tabList .pictureWrap h5 {
+  font: 400 16px 'NS';
+  margin-bottom: 12px;
+}
+
+.viewfamilyCard .info.tab3 .tabList .pictureWrap ul {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.viewfamilyCard .info.tab3 .tabList .pictureWrap ul li {
+  width: 115px;
+  height: 115px;
+  background: #000;
+  float: left;
+  margin-right: 10px;
+}
+
+.viewfamilyCard .info.tab3 .tabList .pictureWrap ul li:nth-child(3n) {
+  margin-right: 0;
+}
+/*# sourceMappingURL=index.css.map */

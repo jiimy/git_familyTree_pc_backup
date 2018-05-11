@@ -1,0 +1,18 @@
+.datePicker {
+  span {
+    display: block;
+    margin: 5px 0 8px 0;
+  }
+  select {
+    width: 60px;
+    height: 32px;
+  }
+  input[type=date] {
+    height: 32px;
+    width: 78%;
+  }
+  input[type=time] {
+    margin-top: 5px;
+    width: 130px;
+  }
+}

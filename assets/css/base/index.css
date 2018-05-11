@@ -1,0 +1,10 @@
+@import url(normalize.css);
+@import url(reset.css);
+@import url(common_css.css);
+
+a{
+  text-decoration: none;
+}
+a:visited{
+  color:#505050;
+}

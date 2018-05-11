@@ -1,0 +1,184 @@
+.familyCardModify {
+  display: none;
+  position: absolute;
+  background: #fff;
+  width: 600px;
+  z-index: 10;
+  border: 1px solid #efefef;
+  div.overflow {
+    height: 740px;
+  }
+  .button {
+    margin-top: 10px;
+    button {
+      width: 95px;
+      text-align: center;
+      height: 30px;
+      color: #bbb;
+      border: 1px solid #ccc;
+      background: #fff;
+      &.on {
+        background: #ff6868;
+        color: white;
+        border: none;
+      }
+    }
+  }
+}
+
+.ModifyPopup {
+  .profileWrap {
+    height: 165px;
+    .profileWrap__anoterInfo {
+      float: left;
+      padding: 15px;
+      font: 300 14px 'NS';
+      width:57%;
+      p{
+        margin-bottom: 5px;
+      }
+      span {
+        display: inline-block;
+        font: 500 14px 'NS';
+        &.wt100 {
+          font: 300 14px 'NS';
+        }
+      }
+    }
+  }
+  .PersonInformation {
+    .PersonInformation__basic {
+      border-right: 1px solid #ccc;
+      float: left;
+      width: 300px;
+      padding: 25px 15px;
+      font-family: 'NS';
+      span {
+        display: inline-block;
+        font: 300 16px 'NS';
+      }
+      input {
+        width: 75%;
+        padding: 5px;
+        margin-bottom: 5px;
+        border: 1px solid #ccc;
+        font: 400 14px 'NS';
+      }
+    }
+    .PersonInformation__address {
+      float: left;
+      padding: 15px 10px;
+      h5 {
+        font: 400 14px 'NS';
+        color: #6d6d6d;
+      }
+      textarea {
+        resize: none;
+        font: 400 14px 'NS';
+        margin-top: 10px;
+        width: 250px;
+        height: 90px;
+        padding: 15px 5px;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+  .moreInfo {
+    border-bottom: 1px solid #ccc;
+    padding: 20px 20px;
+    .dead__Left {
+      float: left;
+      // width: 47%;
+      // padding-right: 20px;
+      font: 500 16px 'NS';
+      p {
+        margin-bottom: 10px;
+        color: #505050;
+      }
+      span {
+        display: inline-block;
+        font: 300 12px/130% 'NS';
+        color: #6d6d6d;
+      }
+    }
+    .dead__Right {
+      float: left;
+      button {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        color: #6d6d6d;
+        text-align: center;
+        padding: 10px 55px;
+        font: 300 15px 'NS';
+        &.on {
+          background: #505050;
+          color: white;
+        }
+      }
+    }
+  }
+  .date {
+    padding: 10px 10px 10px 15px;
+    border-bottom: 1px solid #ccc;
+    span {
+      display: inline-block;
+    }
+    input {
+      width: 74%;
+      padding: 4px 10px;
+    }
+  }
+  .tombLoaction {
+    padding: 10px 15px;
+    font: 300 16px 'NS';
+    span {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input {
+      width: 100%;
+      padding: 10px 10px;
+    }
+    .tip {
+      font: 300 13px 'NS';
+      text-align: right;
+    }
+  }
+  .tombAround {
+    border-top: 1px solid #ccc;
+    padding: 20px 10px;
+    h5 {
+      margin-bottom: 12px;
+    }
+    img {
+      width: 19%;
+      height: 109px;
+      background: #000;
+      display: inline-block;
+    }
+    .wrap{
+      input{
+        float:left;
+        width:70%;
+        margin-top: 6px;
+        height:33px;
+      }
+      .addBtn {
+        margin: 5px 0 0 10px;
+        width: 20%;
+        float:left;
+      }
+    }
+  }
+  h4 {
+    height: 25px;
+    background: #f0f0f0;
+    font: 300 13px 'NS';
+    padding-left: 15px;
+    line-height: 25px;
+  }
+  input {
+    width:64%;
+    border: 1px solid #ccc;
+  }
+}

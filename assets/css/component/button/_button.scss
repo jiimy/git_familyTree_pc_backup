@@ -1,0 +1,39 @@
+.ok_button{
+  font:400 14px 'NS';
+  background: #ffff00;
+  padding:7px 10px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+}
+.cancle_button{
+  font:400 14px 'NS';
+}
+.detail_button{
+  font:400 14px 'NS';
+  background: #ffff00!important;
+  padding:10px 12px;
+  border:1px solid #ccc;
+  border-radius: 5px;
+}
+.addBtn {
+  width: 96%;
+  text-align: center;
+  padding: 10px 0;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  background: #f7f6f2;
+  ;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  &:before {
+    content: '+ ';
+  }
+  .always{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+  }
+}

@@ -1,0 +1,1392 @@
+@charset "UTF-8";
+/* draggable때문에 그 부분 하나로 통합하기 */
+header {
+  display: block;
+  height: 60px;
+  background: #9cd9d6;
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  display: inline;
+  line-height: 56px;
+  font-size: 20px;
+  font-family: 'NS';
+  font-weight: 500;
+}
+
+header .header__hamberMenu {
+  display: none;
+}
+
+header .header__hamberMenu + span {
+  display: none;
+}
+
+header .header__alert {
+  float: right;
+  position: relative;
+  background: url(../img/ic_notifications.png) right no-repeat;
+  margin: 20px 15px 20px 0;
+  width: 20px;
+  height: 20px;
+}
+
+header .header__alert:hover {
+  cursor: pointer;
+}
+
+header .header__tooltip {
+  cursor: auto;
+  position: absolute;
+  display: none;
+  right: 17px;
+  top: 50px;
+  width: 260px;
+  color: #000;
+  border: 1px solid #BBB;
+  z-index: 2;
+  background: #fff;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+header .header__tooltip .title {
+  font: 500 16px NS;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+header .header__tooltip div {
+  position: absolute;
+  right: 6px;
+  top: 8px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+header .header__tooltip div .close {
+  position: absolute;
+  right: 0;
+  top: 8px;
+  width: 18px;
+  height: 2px;
+  background: #444;
+  transform: rotate(45deg);
+}
+
+header .header__tooltip div a:before {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #444;
+  transform: rotate(90deg);
+}
+
+header .header__tooltip li {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 15px 10px 10px;
+}
+
+header .header__tooltip li:last-child {
+  border: none;
+}
+
+header .header__tooltip li p {
+  display: block;
+  padding-bottom: 5px;
+  text-align: left;
+  font: 300 15px NS;
+}
+
+header .header__tooltip li span {
+  display: table-cell;
+  font: 300 13px NS;
+  color: #959595;
+}
+
+header .header__tooltip li span:nth-child(3) {
+  padding-left: 10px;
+}
+
+nav {
+  width: 300px;
+  position: relative;
+  height: calc(100vh - 60px);
+  float: left;
+  background: #fff;
+  height: 200px;
+  opacity: 1;
+}
+
+nav .profile {
+  padding: 32px 0 28px 16px;
+  border-bottom: 1px solid #ccc;
+  font: 400 16px NS;
+  color: #5b5b5b;
+}
+
+nav .profile div {
+  float: left;
+  clear: both;
+  line-height: 22px;
+}
+
+nav .profile__myImg {
+  float: left;
+}
+
+nav .profile__myRootName {
+  margin-top: 20px;
+}
+
+nav .profile__myRootName:before {
+  content: '본관 : ';
+}
+
+nav .profile__myName {
+  line-height: 65px;
+  margin-left: 15px;
+  display: inline-block;
+  margin-top: 17px;
+  font: 500 20px NS;
+}
+
+nav .profile__myName:after {
+  content: ' 님';
+}
+
+nav .profile__myStreet:before {
+  content: '종파 : ';
+}
+
+nav .profile__myCall:before {
+  content: '연락처 : ';
+}
+
+nav .menuList li {
+  position: relative;
+  height: 60px;
+  border-bottom: 1px solid #ccc;
+}
+
+nav .menuList li:hover {
+  background: #f3f3f3;
+}
+
+nav .menuList li a {
+  padding-left: 50px;
+  display: block;
+  font: 400 16px NS;
+  text-align: left;
+  color: #505050;
+  line-height: 60px;
+}
+
+nav .menuList li:nth-child(1) a {
+  background: url(../img/icon-main01-off.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(1) a:hover {
+  background: url(../img/icon-main01-on.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(1).on a {
+  background: url(../img/icon-main01-on.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(2) a {
+  background: url(../img/icon-main02-off.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(2) a:hover {
+  background: url(../img/icon-main02-on.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(2).on2 a {
+  background: url(../img/icon-main02-on.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(3) a {
+  background: url(../img/icon-main03-off.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(3) a:hover {
+  background: url(../img/icon-main03-on.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(4) a {
+  background: url(../img/icon-main04-off.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(4) a:hover {
+  background: url(../img/icon-main04-on.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(3).on2 a {
+  background: url(../img/icon-main03-on.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(4).on a {
+  background: url(../img/icon-main04-on.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(5) a {
+  background: url(../img/icon-main06-off.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(5) a:hover {
+  background: url(../img/icon-main06-on.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(6) a:hover {
+  background: #f3f3f3;
+  border-bottom: 1px solid #ccc;
+}
+
+nav .menuList li:nth-child(5).on a {
+  background: url(../img/icon-main06-on.png) 12px 9px no-repeat;
+  background-size: 12%;
+}
+
+nav .menuList li:nth-child(5).on:hover {
+  background: none;
+}
+
+nav .menuList li:after {
+  position: absolute;
+  background: url(../img/btn-setmore.png) right no-repeat;
+  background-size: 70%;
+  content: "";
+  width: 20px;
+  height: 33px;
+  right: 10px;
+  top: calc(50% - 16.5px);
+}
+
+nav .none {
+  padding-left: 20px !important;
+}
+
+nav .none a {
+  padding-left: 0 !important;
+}
+
+nav.slide {
+  margin-left: 0 !important;
+  position: absolute;
+  z-index: 1;
+}
+
+section {
+  width: calc(100% - 620px);
+  float: left;
+  height: calc(100vh - 60px);
+  background: #ece8da;
+  padding: 3% 4%;
+  overflow: auto;
+}
+
+section article {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+section > div {
+  display: none;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+section div.on2 {
+  display: block !important;
+}
+
+section .myTree {
+  cursor: move;
+  position: relative;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+section .myTreeImg {
+  position: absolute;
+  width: 100%;
+  height: 65%;
+  background: url(../img/main-banner3.jpg) center no-repeat;
+  background-size: cover;
+}
+
+section .myTreeMenu {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+section .myTreeMenu li {
+  width: 33.33333%;
+  float: left;
+  height: 140px;
+  border-top: 1px solid #bbb;
+  border-right: 1px solid #bbb;
+  font: 400 16px NS;
+}
+
+section .myTreeMenu li a {
+  display: block;
+  text-align: center;
+  padding-top: 100px;
+  color: #707070;
+}
+
+section .myTreeMenu li a:before {
+  content: '';
+  display: block;
+}
+
+section .myTreeMenu li:nth-child(1) {
+  background: #fff url(../img/ticon-main01-off.png) center 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(1):hover {
+  background: #fff url(../img/ticon-main01-on.png) center 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(1).block {
+  background: #fff url(../img/ticon-main01-on.png) center 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(2) {
+  background: #fff url(../img/ticon-main02-off.png) 55% 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(2):hover {
+  background: #fff url(../img/ticon-main02-on.png) 55% 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(2).on2 {
+  background: #fff url(../img/ticon-main02-on.png) 55% 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(3) {
+  background: #fff url(../img/ticon-main03-off.png) center 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(3):hover {
+  background: #fff url(../img/ticon-main03-on.png) center 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(3).on2 {
+  background: #fff url(../img/ticon-main03-on.png) center 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(4) {
+  background: #fff url(../img/ticon-main04-off.png) center 10px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(4):hover {
+  background: #fff url(../img/ticon-main04-on.png) center 10px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(4).on2 {
+  background: #fff url(../img/ticon-main04-on.png) center 10px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(5) {
+  background: #fff url(../img/ticon-main05-off.png) center 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(5):hover {
+  background: #fff url(../img/ticon-main05-on.png) center 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(5).block {
+  background: #fff url(../img/ticon-main05-on.png) center 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(6) {
+  background: #fff url(../img/ticon-main06-off.png) center 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(6):hover {
+  background: #fff url(../img/ticon-main06-on.png) center 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(6).block {
+  background: #fff url(../img/ticon-main06-on.png) center 5px no-repeat;
+  background-size: 100px;
+}
+
+section .myTreeMenu li:nth-child(3n+1) {
+  border-left: 1px solid #bbb;
+}
+
+section .myTreeMenu li:nth-child(3) ~ li {
+  border-bottom: 1px solid #bbb;
+}
+
+section .relationSearch {
+  background: #eee;
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  z-index: 10;
+  border: 1px solid #d0d0d0;
+}
+
+section .myRelation {
+  background: #fff;
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  z-index: 1;
+  border: 1px solid #d0d0d0;
+}
+
+section .myRelation > h3 {
+  height: 60px;
+  background: #9cd9d6;
+  color: #fff;
+  font: 500 20px NS;
+  text-align: center;
+  line-height: 60px;
+  cursor: move;
+}
+
+section .myRelation button {
+  bottom: 50px;
+}
+
+section .chatt {
+  background: #fff;
+  width: 400px;
+  height: 600px;
+  border: 1px solid #d0d0d0;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+section .chatt .chatt__title {
+  cursor: move;
+  height: 60px;
+  background: #9CD9D6;
+  color: #fff;
+  font: 500 20px NS;
+  text-align: center;
+  line-height: 60px;
+  position: relative;
+}
+
+section .chatt .chatt__title .popup__close {
+  position: absolute;
+  right: 14px;
+  top: 18px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+section .chatt .chatt__title .popup__close a:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 22px;
+  height: 3px;
+  display: block;
+  background: #fff;
+  transform: rotate(-90deg);
+}
+
+section .chatt .chatt__search {
+  border-bottom: 1px solid #ccc;
+}
+
+section .chatt .chatt__search input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  padding: 10px 50px 10px 20px;
+  font: 500 16px/50px NS;
+  background: url(../img/ic_search2.png) 97% 50% no-repeat;
+}
+
+section .chatt .chatt__search input::placeholder {
+  font: 500 16px NS;
+  color: #959595;
+}
+
+section .chatt .chatt__tablist {
+  display: none;
+}
+
+section .chatt .chatt__tablist .chatt__list {
+  height: 423px;
+  overflow: auto;
+}
+
+section .chatt .chatt__tablist .chatt__list li {
+  height: 65px;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+}
+
+section .chatt .chatt__tablist .chatt__list li a {
+  height: 65px;
+  border-bottom: 1px solid #ccc;
+  color: #505054;
+}
+
+section .chatt .chatt__tablist .chatt__list li div {
+  text-align: left;
+}
+
+section .chatt .chatt__tablist .chatt__list li .chatt__listProfile {
+  float: left;
+  background: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 12px 16px 12px 20px;
+}
+
+section .chatt .chatt__tablist .chatt__list li .chatt__listName {
+  font: 700 15px NS;
+  padding-top: 12px;
+}
+
+section .chatt .chatt__tablist .chatt__list li .chatt__listContent {
+  font: 300 13px NS;
+  color: #737171;
+}
+
+section .chatt .chatt__tablist .chatt__list li .chatt__listDate {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #b2aba2;
+  font: 500 11px NS;
+}
+
+section .chatt .chatt__tab {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+section .chatt .chatt__tab li {
+  width: 50%;
+  height: 65px;
+  float: left;
+  text-align: center;
+  line-height: 65px;
+  font-weight: 600;
+  font-family: 'NS';
+  color: #505054;
+  cursor: pointer;
+}
+
+section .chatt .chatt__tab li.on {
+  background: #9cd9d6;
+  color: #fff;
+}
+
+section .chatt .chatt__tablist2 {
+  display: none;
+}
+
+section .chatt__tablist .chatt__mypc .chatt__pclist ul li .chatt__pclistPhone {
+  font: 200 15px NS;
+}
+
+section .tombSearch {
+  background: #eee;
+}
+
+section .manner {
+  background: #ccc;
+}
+
+section .editInfo {
+  background: #fff;
+  width: 600px;
+  border: 1px solid #ddd;
+  z-index: 1;
+  position: absolute;
+  height: 600px;
+}
+
+section .editInfo .wrap {
+  overflow: auto;
+  height: 100%;
+  background: #fff;
+}
+
+section .editInfo .profile {
+  height: 160px;
+  position: relative;
+}
+
+section .editInfo .profile + ul li:nth-child(1) {
+  height: 80px;
+}
+
+section .editInfo .profile__imgUpload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+section .editInfo .profile__imgUploadfile {
+  position: absolute;
+  right: 37%;
+  bottom: 17%;
+  width: 30px;
+  height: 30px;
+  background: #eee;
+  border-radius: 50%;
+}
+
+section .editInfo .profile__imgUploadfile:hover {
+  cursor: pointer;
+}
+
+section .editInfo .profile__imgUploadfile + .popup {
+  position: absolute;
+  right: 44px;
+  bottom: -34px;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 8px 10px;
+  display: none;
+}
+
+section .editInfo .profile__imgUploadfile + .popup li:nth-child(1) {
+  margin-bottom: 5px;
+}
+
+section .editInfo .profile__imgUploadfile + .popup a {
+  font: 200 13px NS;
+}
+
+section .editInfo h4 {
+  background: #F0F0F0;
+  font: 300 13px NS;
+  height: 25px;
+  padding-left: 15px;
+  line-height: 25px;
+}
+
+section .editInfo .myinfo input {
+  width: 200px;
+}
+
+.active {
+  display: block !important;
+}
+
+.chatt__mypc {
+  position: relative;
+  text-align: left;
+}
+
+.chatt__mypc .chatt__treelist {
+  background: #fff;
+}
+
+.chatt__mypc .chatt__treelist li {
+  padding: 10px 0 10px 15px;
+  line-height: 1.2;
+  position: relative;
+}
+
+.chatt__mypc .chatt__treelist li:after {
+  position: absolute;
+  background: url(../img/btn-setmore.png) right no-repeat;
+  background-size: 100%;
+  content: '';
+  width: 15px;
+  height: 25px;
+  right: 10px;
+  top: calc(50% - 12.5px);
+}
+
+.chatt__mypc .chatt__treelist li a {
+  display: block;
+  padding: 10px 0 10px 15px;
+}
+
+.chatt__mypc .chatt__treelist .chatt__treelistTitle {
+  font: 300 16px NS;
+  color: #3a3a3a;
+}
+
+.chatt__mypc .chatt__treelist .chatt__treelistMaster {
+  font: 200 14px NS;
+  color: #888;
+}
+
+.chatt__mypc h3 {
+  background: #F0F0F0;
+  font: 200 11px NS;
+  padding: 5px 0 5px 15px;
+}
+
+.chatt__mypc .chatt__pclist {
+  height: 140px;
+  overflow: auto;
+  border-bottom: 2px solid #eee;
+}
+
+.chatt__mypc .chatt__pclist ul li {
+  background: #fff;
+  padding: 12px 0 12px 15px;
+  height: 70px;
+}
+
+.chatt__mypc .chatt__pclist ul li a {
+  display: block;
+}
+
+.chatt__mypc .chatt__pclist ul li a:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.chatt__mypc .chatt__pclist ul li .img {
+  float: left;
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background: #b1b1b1;
+  letter-spacing: 2px;
+}
+
+.chatt__mypc .chatt__pclist ul li .chatt__pclistName {
+  color: #000;
+  font: 500 16px NS;
+}
+
+.chatt__mypc .chatt__pclist ul li .chatt__pclistName span {
+  font: 300 13px NS;
+  color: #b1b1b1;
+}
+
+.chatt__mypc .chatt__pclist ul li .chatt__pclistName span:before {
+  content: '(';
+}
+
+.chatt__mypc .chatt__pclist ul li .chatt__pclistName span:after {
+  content: ')';
+}
+
+.chatt__mypc p {
+  position: absolute;
+  font: 500 15px NS;
+  color: #0c0c0c;
+  right: 0;
+  left: 0;
+  bottom: -54px;
+  text-align: left;
+  margin: auto;
+  width: 350px;
+  line-height: 1.5;
+}
+
+.relationSearch .chatt__mypc p {
+  position: absolute;
+  font: 500 15px NS;
+  color: #0c0c0c;
+  right: 0;
+  left: 0;
+  bottom: 120px;
+  text-align: left;
+  margin: auto;
+  width: 350px;
+  line-height: 1.5;
+  position: absolute;
+  font: 500 15px NS;
+  color: #0c0c0c;
+  right: 0;
+  left: 0;
+  bottom: -90px;
+  text-align: left;
+  margin: auto;
+  width: 350px;
+  line-height: 1.5;
+}
+
+.myRelation .chatt__mypc button {
+  position: absolute;
+  bottom: -130px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 350px;
+  padding: 15px 0;
+  font: 300 18px NS;
+  color: #fff;
+  background: #ff6868;
+}
+
+.alerttopNew {
+  background: #F0F0F0;
+  padding-left: 10px;
+  font: 400 12px/25px NS;
+  color: #505050;
+}
+
+aside {
+  width: 320px;
+  height: calc(100vh - 60px);
+  float: right;
+  border-left: 1px solid #ccc;
+  position: relative;
+}
+
+aside .sideMenu {
+  display: none;
+}
+
+aside .calendarSide .scheduleAdd {
+  padding: 15px 10px 20px 10px;
+}
+
+aside .calendarSide .scheduleAdd .title {
+  width: 80px;
+  color: black;
+  display: inline-block;
+}
+
+aside .calendarSide .scheduleAdd .title + input,
+aside .calendarSide .scheduleAdd .title + select {
+  width: 71%;
+  height: 32px;
+  margin-bottom: 10px;
+}
+
+aside .calendarSide .scheduleAdd h5 {
+  margin: 15px 0 10px 0;
+}
+
+aside .calendarSide .scheduleAdd h5 + select {
+  width: 100%;
+  height: 36px;
+  margin-bottom: 10px;
+}
+
+aside .calendarSide .scheduleAdd .addBtn {
+  width: 100%;
+  font: 400 15px 'NS';
+}
+
+aside .calendarSide .scheduleAdd .detail_button {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+}
+
+aside .searchTomb input[type=search] {
+  width: 100%;
+  border: none;
+  padding: 15px 15px 15px 20px;
+  font: 400 16px 'NS';
+}
+
+aside .searchTomb .searchedTomb li {
+  padding: 12px 12px 15px 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+aside .searchTomb .searchedTomb li::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+aside .searchTomb .searchedTomb li .img {
+  float: left;
+}
+
+aside .searchTomb .searchedTomb li .img .numbered {
+  display: inline-block;
+  background: url(/git_familyTree_pc/assets/img/icon-navi-number.png) center no-repeat;
+  width: 26px;
+  height: 36px;
+  text-align: center;
+  color: white;
+  line-height: 160%;
+  margin-right: 10px;
+}
+
+aside .searchTomb .searchedTomb li .text {
+  float: left;
+}
+
+aside .searchTomb .searchedTomb li .text div {
+  font: 400 16px 'NS';
+  display: inline-block;
+  line-height: 100%;
+}
+
+aside .searchTomb .searchedTomb li .text div:after {
+  content: '님 산소';
+}
+
+aside .searchTomb .searchedTomb li .text span {
+  margin: 5px 0;
+  font: 400 14px 'NS';
+  color: #ccc;
+  display: block;
+}
+
+aside .searchTomb .searchedTomb li .text a {
+  padding: 4px 14px;
+  border: 1px solid #ccc;
+  background: #efefef;
+  display: inline-block;
+  font: 400 12px/100% 'NS';
+  color: #444;
+  margin-top: 5px;
+}
+
+aside .searchTomb .registTombBtn {
+  width: 97%;
+  background: #ff6868;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+  border-radius: 5px;
+  font: 500 20px 'NS';
+}
+
+aside .day li {
+  height: 80px;
+  padding: 6px 20px 10px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+aside .day li .title {
+  font: 400 16px NS;
+  color: #505050;
+}
+
+aside .day li .content {
+  margin-top: -2px;
+  font: 400 16px NS;
+  color: #505050;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+aside .day li .date {
+  font: 400 14px NS;
+  color: #959595;
+}
+
+aside .familyInfo h3 {
+  background: #F0F0F0;
+  padding: 5px 0 5px 12px;
+  color: #3a3a3a;
+  font: 500 11px NS;
+}
+
+aside .familyInfo > .content {
+  padding: 10px 0 10px 15px;
+  font: 400 15px NS;
+  color: #505050;
+  width: 90%;
+}
+
+aside .familyInfo aside .familyInfo span:nth-of-type(0) {
+  color: red;
+}
+
+aside .familyInfo .content span:nth-of-type(1):before {
+  content: '본관 : ';
+}
+
+aside .familyInfo .content span:nth-of-type(2):before {
+  content: '| 종파 : ';
+}
+
+aside .familyInfo .content span:nth-of-type(3)::before {
+  content: '소개 : ';
+}
+
+aside .family .familyInfo .familyEtc li {
+  padding: 10px 0 10px 15px;
+  font: 400 16px 'NS';
+  color: #505050;
+}
+
+aside .family .familyInfo .familyMaster {
+  height: 70px;
+  padding: 10px 0 10px 15px;
+}
+
+aside .family .familyInfo .familyMaster .img {
+  display: block;
+  float: left;
+  background: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 5px 10px 5px 0px;
+}
+
+aside .family .familyInfo .familyMaster .name {
+  float: left;
+  padding-top: 15px;
+}
+
+aside .family .familyInfo .familyMasterSub li {
+  padding: 10px 0 8px 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+aside .family .familyInfo .familyMasterSub li:last-child {
+  border-bottom: none;
+}
+
+aside .family .familyInfo .familyMasterSub .img {
+  margin: 0 5px 0 0;
+  display: inline-block;
+  background: #000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+aside .family .familyInfo .familyMasterSub .img + span {
+  vertical-align: top;
+  margin-top: 12px;
+  display: inline-block;
+}
+
+aside .family .familyInfo .familyMasterSub span {
+  float: none;
+}
+
+aside .CalendarButton {
+  display: block;
+  font: 400 18px/80px NS;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+aside .CalendarButton:before {
+  content: '+ ';
+  font-size: 19px;
+  font-family: bold;
+  vertical-align: unset;
+}
+
+aside .CalendarButton.active {
+  background-color: #ff6868;
+  color: #fff;
+}
+
+aside .button.on {
+  display: block;
+  font: 400 18px/60px NS;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+
+aside .option {
+  display: none;
+  height: 50px;
+  background: url(../img/ic_rightsetting.png) right15px bottom15px no-repeat;
+}
+
+aside .option.on {
+  display: block;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  background: #fff url(../img/ic_rightsetting.png) right15px bottom15px no-repeat;
+}
+
+.person {
+  cursor: pointer;
+  position: relative;
+}
+
+.person .name span:before {
+  content: '(';
+}
+
+.person .name span:after {
+  content: '世)';
+}
+
+.familyTree_popup {
+  position: absolute;
+  cursor: default;
+  width: 270px;
+  height: 130px;
+  background: #fff;
+  z-index: 1;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.familyTree_popup .familyTree_close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: #000;
+}
+
+.familyTree_popup .name {
+  padding-top: 30px;
+  font: 400 15px 'NS';
+  top: 0;
+  transform: translate(0, -20%);
+}
+
+.familyTree_popup ul {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.familyTree_popup ul li {
+  float: left;
+  width: 33.3%;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  padding: 12px 0;
+}
+
+.familyTree_popup ul li:nth-child(1) {
+  border-left: none;
+}
+
+.familyTree_popup a {
+  cursor: pointer;
+  font: 400 16px 'NS';
+  display: block;
+}
+
+.familyTree_popup .radio_box label {
+  float: left;
+  width: 33.3%;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+  padding: 12px 0;
+}
+
+.familyTree_popup .radio_box input {
+  display: none;
+}
+
+.familyTree_popup .radio_box input:checked + label {
+  background: #ff6868;
+  color: white;
+}
+
+.familyTree_popup.popup2 {
+  height: 292px;
+}
+
+.familyTree_popup.popup2 .name {
+  width: 160px;
+  margin: 0 auto;
+}
+
+.familyTree_popup.popup2 button {
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 6px 10px;
+  font: 400 14px 'NS';
+}
+
+.familyTree_popup.popup2 button:nth-of-type(1) {
+  margin-right: 5px;
+}
+
+.familyTree_popup.popup2 button:hover {
+  color: #000;
+  background: yellow;
+}
+
+.ui-draggable > h3 {
+  cursor: move;
+  height: 60px;
+  background: #9cd9d6;
+  color: #fff;
+  font: 500 20px 'NS';
+  text-align: center;
+  line-height: 60px;
+  position: relative;
+}
+
+.ui-draggable .popup__close {
+  position: absolute;
+  right: 14px;
+  top: 18px;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.ui-draggable .popup__close a {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  width: 22px;
+  height: 3px;
+  background: #fff;
+  transform: rotate(45deg);
+}
+
+.ui-draggable .popup__close a:before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 22px;
+  height: 3px;
+  display: block;
+  background: #fff;
+  transform: rotate(-90deg);
+}
+
+@media all and (max-width: 1024px) {
+  header .header__hamberMenu {
+    display: block;
+    float: left;
+    width: 24px;
+    margin: 16px 0 0 16px;
+    cursor: pointer;
+  }
+  header .header__hamberMenu span {
+    display: block;
+    margin: 5px auto;
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    transition: all .5s ease;
+  }
+  header .header__hamberMenu:hover span:first-child {
+    transform: translateY(-3px);
+  }
+  header .header__hamberMenu:hover span:last-child {
+    transform: translateY(3px);
+  }
+  header .header__hamberMenu + span {
+    display: block;
+    float: left;
+    line-height: 54px;
+    font-size: 20px;
+    padding-left: 16px;
+  }
+  header .header__hamberMenu + span:hover {
+    cursor: pointer;
+  }
+  header .header__hamberMenu.is-opened span:first-child {
+    transform: translateY(5px) rotate(45deg);
+  }
+  header .header__hamberMenu.is-opened span:nth-child(2) {
+    transform: scaleX(0);
+  }
+  header .header__hamberMenu.is-opened span:last-child {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  nav {
+    width: 300px;
+    position: absolute;
+    z-index: 1;
+    height: calc(100vh - 60px);
+  }
+  section.mainContent {
+    width: calc(100% - 320px);
+    float: left;
+    height: calc(100vh - 60px);
+  }
+  section.mainContent.width300 {
+    width: calc(100% - 300px);
+    float: left;
+    height: calc(100vh - 60px);
+    background: #eee;
+  }
+}
+/*# sourceMappingURL=common.css.map */

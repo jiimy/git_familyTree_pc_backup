@@ -1,0 +1,241 @@
+.viewfamilyCard {
+display: none;
+
+  width: 400px;
+  z-index: 10;
+  border: 1px solid #eee;
+  background: #fff;
+  position: absolute !important;
+  .profile {
+    background: #9cd9d6;
+    color: white;
+    padding: 15px 30px 50px 30px;
+    .img {
+      float: left;
+      width: 100px;
+      height: 100px;
+      background: #000;
+      margin-right: 25px;
+      border-radius: 50%;
+    }
+    .text {
+      float: left;
+      .name {
+        font: 500 20px 'NS';
+      }
+      .gamun {
+        font: 300 14px 'NS';
+        margin: 5px 0px 8px 0px;
+      }
+      .relation {
+        font: 300 14px 'NS';
+        &:before {
+          content: '나와의 관계 :';
+        }
+      }
+    }
+  }
+  .contentNav li {
+    float: left;
+    width: 33.3%;
+    padding: 20px 0;
+    text-align: center;
+    background: #ece8da;
+    color: black;
+    border-bottom: 5px solid #ece8da;
+    font: 500 16px 'NS';
+    &.active {
+      border-bottom: 5px solid #9cd9d6;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .info {
+    display: none;
+    &.tab1 {
+      ul {
+        li {
+          font: 500 16px 'NS';
+          padding: 16px 12px 16px 20px;
+          border-bottom: 2px solid #eee;
+          p {
+            width: 90px;
+            color: #959595;
+            display: inline-block;
+          }
+        }
+      }
+      .day {
+        color: #505050;
+        .title {
+          font: 400 16px 'NS';
+        }
+        .content {
+          margin-top: -2px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .date {
+          font: 400 14px 'NS';
+          color: #959595;
+        }
+      }
+      button {
+        width: 100%;
+        padding: 20px 0;
+        font: 500 16px 'NS';
+        color: #505050;
+        background: #fff;
+        text-align: center;
+      }
+    }
+    &.tab2 {
+      ul li {
+        padding: 15px;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        font: 400 16px 'NS';
+        span {
+          display: inline-block;
+          width: 100px;
+          color: #959595;
+        }
+        p {
+          display: inline-block;
+          color: #505050;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        &.isAlive {
+          p {
+            font: 400 16px 'NS';
+          }
+          span.sub {
+            display: block;
+            width: 280px;
+            font: 300 13px 'NS';
+            margin-top: 5px;
+          }
+          .switch {
+            position: absolute;
+            width: 60px;
+            height: 10px;
+            top: 42%;
+            left: 82%;
+            .switch-input {
+              position: fixed;
+              left: -99999px;
+              &.switch-input:checked+.switch-track {
+                background-color: rgba(0, 150, 136, 0.5);
+              }
+            }
+          }
+          .switch-input:checked+.switch-track>.switch-thumb {
+            left: 15px;
+            box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.3);
+            background-color: #009688;
+          }
+          .switch-track {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 35px;
+            height: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 200ms cubic-bezier(.4, 0, .2, 1);
+            background-color: rgba(0, 0, 0, 0.38);
+          }
+          .switch-track>.switch-thumb {
+            position: absolute;
+            content: "";
+            top: -3px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            transition: left 200ms cubic-bezier(.4, 0, .2, 1), background-color 200ms cubic-bezier(.4, 0, .2, 1), box-shadow 200ms cubic-bezier(.4, 0, .2, 1);
+            box-shadow: -1px 1px 3px 1px rgba(0, 0, 0, 0.3);
+            background-color: #FAFAFA;
+          }
+        }
+      }
+      h4 {
+        background: #f0f0f0;
+        padding-left: 10px;
+        font: 400 12px/25px 'NS';
+        color: #505050;
+      }
+      ul.tombInfo li {
+        .name2 {
+          display: block;
+          font: 500 18px 'NS';
+          color: #292929;
+          &.name2 {
+            content: '님 산소';
+          }
+        }
+        .address {
+          width: 80%;
+          font: 400 12px 'NS';
+        }
+        .detail_button {
+          position: absolute;
+          right: 15px;
+          bottom: 20px;
+        }
+      }
+    }
+    &.tab3 {
+      .tabitem {
+        cursor: pointer;
+        width: 50%;
+        float: left;
+        text-align: center;
+        padding: 12px 0 15px 0;
+        font: 400 16px 'NS';
+        border-bottom: 1px solid #ccc;
+        &.active {
+          // background: #000;
+          border-bottom: none;
+          font:500 16px 'NS';
+          &:after {
+            content: '';
+            display: block;
+            border-bottom: 4px solid black;
+            padding-bottom: 12px;
+          }
+        }
+      }
+      .tabList {
+        display: none;
+        .pictureWrap {
+          padding: 15px;
+          h5 {
+            font: 400 16px 'NS';
+            margin-bottom: 12px;
+          }
+          ul {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+            li {
+              width: 115px;
+              height: 115px;
+              background: #000;
+              float: left;
+              margin-right: 10px;
+              &:nth-child(3n) {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

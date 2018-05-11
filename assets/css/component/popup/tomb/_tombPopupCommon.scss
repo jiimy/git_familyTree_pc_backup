@@ -1,0 +1,125 @@
+.TombPopup {
+  .Wrap {
+    padding: 20px 20px 10px 20px;
+    p {
+      font: 400 20px 'NS';
+      margin-bottom: 5px;
+      &:after {
+        content: '씨 산소';
+      }
+    }
+    span {
+      font: 300 14px 'NS';
+      margin-bottom: 10px;
+      display: block;
+    }
+  }
+  h4 {
+    padding: 7px 15px;
+    background: #f0f0f0;
+    font: 400 12px 'NS';
+    color: #505050;
+  }
+
+
+  .btnWrap {
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    text-align: center;
+  }
+  input[type=search] {
+    width: 100%;
+    border: none;
+    padding: 15px 30px 15px 20px;
+    background: url('../../../../img/ic_search2.png') 97% 17px no-repeat;
+    font: 400 14px 'NS';
+    border-bottom: 1px solid #ccc;
+  }
+}
+.tombImgWrap {
+  border-top: 1px solid #ccc;
+  padding: 15px 18px 50px 18px;
+  text-align: center;
+  h5 {
+    text-align: left;
+    font: 300 18px/100% 'NS';
+  }
+  img {
+    width: 110px;
+    height: 110px;
+    float: left;
+    background: #000;
+    margin-right: 15px;
+    margin-top: 15px;
+    &:nth-of-type(2) {
+      // margin-top: 15px;
+    }
+    &:nth-of-type(3n) {
+      margin-right: 0px;
+    }
+  }
+}
+.basicInfo {
+  li {
+    padding: 15px;
+    position: relative;
+    img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      background: #000; // display: inline-block;
+      float: left;
+    }
+    span {
+      float: left;
+      &.name {
+        color: #505050;
+        font: 500 18px 'NS';
+        margin-left: 15px;
+        margin-top: -3px;
+        &:before {
+          content: '(故)'
+        }
+      }
+      &.year {
+        font: 400 13px 'NS';
+        color: #959595;
+        margin: 4px 0 0 4px;
+        &:before {
+          content: '(';
+        }
+        &:after {
+          content: ')';
+        }
+      }
+    }
+    label {
+      float: right;
+      cursor: pointer;
+      input[type=radio] {
+        display: none;
+        +span {
+          width: 30px;
+          height: 30px;
+          background: #fff;
+          display: inline-block;
+          border:2px solid #FF6868;
+        }
+        &:checked+span {
+          background: url(/git_familyTree_pc/assets/img/check-on.png) center no-repeat;
+          background-color: #ffe0e0;
+        }
+      }
+    }
+    p {
+      position: absolute;
+      left: 75px;
+      color: #959595;
+      font: 400 15px 'NS';
+      bottom: 13px;
+    }
+    button {
+      float: right;
+    }
+  }
+}
