@@ -14,4 +14,5 @@ popup.open('.my_chatt','.chatt');
 popup.open('.editInfo','.myProfileModify');
 
 gnbMenu.click();
+mainMenu.click();
 

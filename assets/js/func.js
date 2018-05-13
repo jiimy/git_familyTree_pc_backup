@@ -146,18 +146,23 @@ var popup = {
   }
 }
 
+// 메인메뉴 클릭시
 var mainMenu = {
   click: function () {
-    console.log('메인메뉴 클릭했을때');
+    
+    $('.myTreeMenu li').click(function(){
+      console.log('메인메뉴 클릭했을때');
+    });
   }
 }
 var gnbMenu = {
   click:function(){
+    // gnb메뉴 클릭시 section메뉴 바뀌게 하기. index값으로 해서 순서가 중요!
     $('.menuList li').click(function(e){
       e.preventDefault();
       var $li_index = $(this).index();
+      console.log($li_index);
       var a = $('.menuList li').eq($li_index);
-      
       if($li_index == 0 || $li_index == 3 || $li_index == 5){
         $(this).siblings('li').removeClass('on');
         $(this).addClass('on');
