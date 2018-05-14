@@ -1150,6 +1150,10 @@ aside .CalendarButton.active {
   color: #fff;
 }
 
+aside .CalendarButton.active a {
+  color: #fff;
+}
+
 aside .button.on {
   display: block;
   font: 400 18px/60px NS;

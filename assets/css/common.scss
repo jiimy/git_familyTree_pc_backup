@@ -1079,6 +1079,9 @@ aside {
       background-color: #ff6868;
       color: #fff;
     }
+    &.active a{
+      color:#fff;
+    }
   }
   .button.on {
     display: block;

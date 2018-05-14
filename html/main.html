@@ -8,11 +8,11 @@
   <title>가족나무</title>
   <!-- base js -->
   <!-- <script src="js/base/jquery-2.2.4.min.js"></script> -->
-  <script src="/git_familyTree_pc_backup/assets/js/base/jquery-2.2.4.min.js"></script>
-  <script src="/git_familyTree_pc_backup/assets/js/base/jquery-ui.min.js"></script>
+  <script src="/assets/js/base/jquery-2.2.4.min.js"></script>
+  <script src="/assets/js/base/jquery-ui.min.js"></script>
   <!-- lib js -->
-  <script src="/git_familyTree_pc_backup/assets/js/lib/moment.min.js"></script>
-  <script src="/git_familyTree_pc_backup/assets/js/lib/fullcalendar.min.js"></script>
+  <script src="/assets/js/lib/moment.min.js"></script>
+  <script src="/assets/js/lib/fullcalendar.min.js"></script>
 
   <!-- base css -->
   <!-- <link rel="stylesheet" href="./normalize.css"> -->
@@ -20,23 +20,23 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
   <!-- <link rel="stylesheet" href="/assets/css/base/normalize.css">
   <link rel="stylesheet" href="/assets/css/base/reset.css"> -->
-  <link rel="stylesheet" href="/git_familyTree_pc_backup/assets/css/base/index.css">
+  <link rel="stylesheet" href="/assets/css/base/index.css">
   
   <!-- lib css -->
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-  <link rel="stylesheet" href="/git_familyTree_pc_backup/assets/css/lib/font.css">
-  <link rel="stylesheet" href="/git_familyTree_pc_backup/assets/css/lib/hierarchy-view.css">
-  <link rel="stylesheet" href="/git_familyTree_pc_backup/assets/css/lib/familyTree.css">
-  <link rel="stylesheet" href="/git_familyTree_pc_backup/assets/css/lib/fullcalendar.min.css">
-  <link rel="stylesheet" href="/git_familyTree_pc_backup/assets/css/lib/fullcalendar.print.min.css">
+  <link rel="stylesheet" href="/assets/css/lib/font.css">
+  <link rel="stylesheet" href="/assets/css/lib/hierarchy-view.css">
+  <link rel="stylesheet" href="/assets/css/lib/familyTree.css">
+  <link rel="stylesheet" href="/assets/css/lib/fullcalendar.min.css">
+  <link rel="stylesheet" href="/assets/css/lib/fullcalendar.print.min.css">
   <!-- component -->
-  <link rel="stylesheet" href="/git_familyTree_pc_backup/assets/css/component/index.css">
+  <link rel="stylesheet" href="/assets/css/component/index.css">
   <!-- basic css -->
   
-  <link rel="stylesheet" href="/git_familyTree_pc_backup/assets/css/common.css">
+  <link rel="stylesheet" href="/assets/css/common.css">
 
   <!-- 달력 데이터 테스트용 더미데이터 -->
-  <script src="/git_familyTree_pc_backup/assets/js/CalendarDummyData.js"></script>
+  <script src="/assets/js/CalendarDummyData.js"></script>
 </head>
 
 <body>
@@ -564,7 +564,7 @@
         <div class="profile__myStreet">문정공파 33세손</div>
         <div class="profile__myCall">010-0000-0000</div>
       </div>
-      <ul class="menuList">
+      <ul class="menuList menu">
         <li class="my_tree">
           <a href="">내 가계도</a>
         </li>
@@ -574,10 +574,10 @@
         <li class="my_chatt">
           <a href="">채팅</a>
         </li>
-        <li class="tomb">
+        <li>
           <a href="">산소 찾기</a>
         </li>
-        <li class="manner ">
+        <li>
           <a href="">가계 예절</a>
         </li>
         <li class="editInfo none">
@@ -592,15 +592,15 @@
     <section class="mainContent">
       <article class="main block">
         <div class="myTreeImg"></div>
-        <ul class="myTreeMenu clear_fix">
+        <ul class="myTreeMenu menu clear_fix">
           <li>
             <a href="#/">내 가계도</a>
           </li>
 
-          <li>
+          <li class="my_friend">
             <a href="#/">나의 인맥</a>
           </li>
-          <li>
+          <li class="my_chatt">
             <a href="#/">채팅</a>
           </li>
           <li>
@@ -609,7 +609,7 @@
           <li>
             <a href="#/">가계예절</a>
           </li>
-          <li>
+          <li class="my_calendar">
             <a href="#/">일정</a>
           </li>
         </ul>
@@ -1035,13 +1035,13 @@
   });
 });
 </script>
-  <script async src="/git_familyTree_pc_backup/assets/js/common.js"></script>
+  <!-- <script async src="/assets/js/common.js"></script> -->
   <!-- 선언 js -->
-  <script async src="/git_familyTree_pc_backup/assets/js/func.js"></script>
+  <script async src="/assets/js/func.js"></script>
   <!-- 실행 js -->
-  <script async src="/git_familyTree_pc_backup/assets/js/exec.js"></script>
-  <script async src="/git_familyTree_pc_backup/assets/js/lib/draggable.js"></script>
-  <script src="/git_familyTree_pc_backup/assets/js/lib/wheelzoom.js"></script>
+  <script async src="/assets/js/exec.js"></script>
+  <script async src="/assets/js/lib/draggable.js"></script>
+  <script src="/assets/js/lib/wheelzoom.js"></script>
   <script>
     wheelzoom(document.querySelector('.myTree'));
   </script>
