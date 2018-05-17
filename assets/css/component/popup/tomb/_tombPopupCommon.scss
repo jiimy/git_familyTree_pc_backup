@@ -5,7 +5,7 @@
       font: 400 20px 'NS';
       margin-bottom: 5px;
       &:after {
-        content: '씨 산소';
+        content: '? ??';
       }
     }
     span {
@@ -78,7 +78,7 @@
         margin-left: 15px;
         margin-top: -3px;
         &:before {
-          content: '(故)'
+          content: '?'
         }
       }
       &.year {

@@ -51,7 +51,7 @@
   background: #fff;
   width: 600px;
   height: 720px;
-  z-index: 1;
+  z-index: 10;
   border: 1px solid #efefef;
 }
 
@@ -465,7 +465,7 @@
 }
 
 .TombPopup .Wrap p:after {
-  content: '씨 산소';
+  content: '? ??';
 }
 
 .TombPopup .Wrap span {
@@ -545,7 +545,7 @@
 }
 
 .basicInfo li span.name:before {
-  content: '(故)';
+  content: '?';
 }
 
 .basicInfo li span.year {

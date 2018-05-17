@@ -295,7 +295,7 @@ $(function () {
     let htm =
       '<div class="familyTree_popup popup"><a href="#/" class="familyTree_close"></a><p class="name">' +
       name +
-      '</p><ul class="clear_fix"><li><a href="#" class="add">추가</a></li><li><a href="#" class="modify">수정</a></li><li><a href="#">정보</a></li></ul></div>';
+      '</p><ul class="clear_fix"><li class="add"><a href="#">추가</a></li><li class="modify"><a href="#">수정</a></li><li class="info"><a href="#">정보</a></li></ul></div>';
 
     // 삭제(닫기)
     if ($("body").find(".familyTree_popup").length >= 1) {
